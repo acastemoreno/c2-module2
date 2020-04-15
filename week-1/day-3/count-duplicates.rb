@@ -1,8 +1,13 @@
 def count_duplicates(array)
-  array.group_by {|i| i}.inject(0) do |acc, (key, array)|
-    acc += array.length - 1  if array.length >=2
-    acc
+  array.sort.inject([nil, 0]) do |(last_val, acc), item|
+    if last_val == item 
+      acc+=1 
+    else 
+      last_val = item 
+    end
+    [last_val, acc]
   end
+  .last
 end
 
 numbers_1 = [1, 2, 3, 2, 5, 8, 5, 10, 5]
