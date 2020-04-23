@@ -12,7 +12,7 @@ class Task
   end
 
   def to_s
-    "taks '#{@name}' that own to '#{@who}'"
+    "task '#{@name}' that own to '#{@who}'"
   end
 
   def inspect
