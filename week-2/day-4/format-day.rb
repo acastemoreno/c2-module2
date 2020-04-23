@@ -1,0 +1,9 @@
+require 'date'
+
+def format_date(date)
+  date.to_time.strftime("%B %d, del %Y") 
+end
+
+
+date = Time.new(2020, 4, 10)
+p format_date(date) # Returns April 10, del 2020
