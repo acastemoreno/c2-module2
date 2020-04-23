@@ -11,12 +11,12 @@ def navigate_json
     hash["members"].each do |member|
       puts "- #{member["name"]}"
       puts "\t- Age: #{member["age"]}"
-      puts "\t- Superpowers: #{list_powers(member["powers"])}"
+      puts "\t- Superpowers: #{spell_list_powers(member["powers"])}"
     end
   end
 end
 
-def list_powers(array_powers)
+def spell_list_powers(array_powers)
   length = array_powers.length
   array_powers.each_with_index.inject("") do |acc, (power, i)| 
     if i == 0
